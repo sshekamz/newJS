@@ -25,18 +25,37 @@
 
 
 // }-----------------GetElementby Tag Name
-var li=document.getElementsByTagName('li');
-//  console.log(li);
-//  console.log(li[1]);
- console.log(li[4]);
- li[4].style.color="Yellow";
+// var li=document.getElementsByTagName('li');
+// //  console.log(li);
+// //  console.log(li[1]);
+//  console.log(li[4]);
+//  li[4].style.color="Yellow";
 
- //-------editing---
+//  //-------editing---
 
- var cli=document.getElementsByClassName('list-group')
- const newLi=cli.getElementsByTagName('li');
- console.log(newLi);
- 
+//  var cli=document.getElementsByClassName('list-group')
+//  const newLi=cli.getElementsByTagName('li');
+//  console.log(newLi);
+/// querySelector
+var header=document.querySelector('#main-header');
+header.style.borderBottom= 'solid 4px #ccc';
+
+var secondItem=document.querySelector('.list-group-item:nth-child(2)');
+secondItem.style.backgroundColor="Green";
+
+var thirdItem=document.querySelector('.list-group-item:nth-child(3)');
+thirdItem.style.display='none';
+
+//querySelectorALl
+
+ var secondItem=document.querySelectorAll('.list-group-item');
+ console.log(secondItem[0].innerText);
+ secondItem[1].style.color="Green";
+
+ var odd= document.querySelectorAll('li:nth-child(odd)');
+ for(var i=0;i<odd.length;i++){
+    odd[i].style.backgroundColor="Green";
+ }
 
 
 
